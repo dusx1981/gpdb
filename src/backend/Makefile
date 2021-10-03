@@ -43,7 +43,11 @@ endif
 endif
 
 OBJS = $(SUBDIROBJS) $(LOCALOBJS) $(top_builddir)/src/port/libpgport_srv.a \
-       $(top_builddir)/src/common/libpgcommon_srv.a
+       $(top_builddir)/src/common/libpgcommon_srv.a \
+       $(top_builddir)/src/gtm/client/libgtmclient.a \
+       $(top_builddir)/src/gtm/common/libgtm.a \
+       $(top_builddir)/src/gtm/libpq/libpqcomm.a
+
 
 ifeq ($(PORTNAME), darwin)
 LDOPTS = -Z
